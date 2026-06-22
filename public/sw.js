@@ -1,9 +1,9 @@
-const CACHE_NAME = 'activity-dashboard-v1';
+const CACHE_NAME = 'ptc-tracker-v2';
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png',
+  '/ptc-icon-192.png',
+  '/ptc-icon-512.png',
 ];
 
 // Install — cache core assets
