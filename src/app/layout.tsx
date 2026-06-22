@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Activity Dashboard — Account Monitor',
+  title: 'PTC - Customer Issue Tracker',
   description:
     'Upload your Excel activity report and explore account-level details including reasons, CR/RITM, concern teams, and quarters in a beautiful interactive dashboard.',
   keywords: ['activity dashboard', 'account monitor', 'excel upload', 'CR RITM tracker'],
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'ActivityDash',
+    title: 'PTC Tracker',
   },
   icons: {
-    icon: '/icon-512.png',
-    apple: '/apple-icon.png',
+    icon: '/ptc-icon-512.png',
+    apple: '/ptc-apple-icon.png',
   },
 };
 
