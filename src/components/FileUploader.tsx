@@ -126,7 +126,8 @@ export default function FileUploader({ onDataLoaded, recentFiles, onLoadRecent }
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.header}>
-          <h1 className={styles.title}>PTC - Customer Issues Tracker</h1>
+          <img src="/ptc-logo.svg" alt="PTC Logo" className={styles.logo} />
+          <h1 className={styles.title}>Customer Issue Tracker</h1>
           <p className={styles.subtitle}>
             Drop Your Excel/CSV File
           </p>

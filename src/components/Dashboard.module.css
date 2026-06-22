@@ -21,6 +21,12 @@
 .headerLeft {
   display: flex;
   align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
 }
 
 .headerTitle {

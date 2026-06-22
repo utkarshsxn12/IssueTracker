@@ -124,8 +124,9 @@ export default function Dashboard({ data, onReset }: Props) {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.headerLeft}>
+          <img src="/ptc-logo.svg" alt="PTC Logo" className={styles.logo} />
           <div>
-            <h1 className={styles.headerTitle}>PTC - Customer Issues Tracker</h1>
+            <h1 className={styles.headerTitle}>Customer Issue Tracker</h1>
             <p className={styles.headerSub}>Account Activity Monitor</p>
           </div>
         </div>

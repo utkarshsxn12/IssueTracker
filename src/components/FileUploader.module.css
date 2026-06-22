@@ -21,6 +21,15 @@
 
 .header {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
 }
 
 .title {
@@ -28,6 +37,7 @@
   font-weight: 800;
   color: #0f172a;
   margin-bottom: 0.5rem;
+  margin-top: 0;
 }
 
 .subtitle {

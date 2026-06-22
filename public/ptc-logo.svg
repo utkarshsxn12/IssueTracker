@@ -1,0 +1,8 @@
+
+<svg width="150" height="50" viewBox="0 0 150 50" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <path d="M25 10 L45 10 L45 40 L25 40 Z" fill="#10b981"/>
+    <path d="M30 15 L40 15 L40 35 L30 35 Z" fill="#0f172a"/>
+    <text x="55" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#0f172a">PTC</text>
+  </g>
+</svg>
