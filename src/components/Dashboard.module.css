@@ -204,25 +204,25 @@
 
 .dropdownTrigger:hover,
 .dropdownTriggerOpen {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  border-color: #64748b;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
 }
 
 .dropdownTriggerSelected {
-  border-color: #10b981;
-  background: #f0fdf4;
+  border-color: #334155;
+  background: #f8fafc;
 }
 
-/* Reason dropdown — teal accent */
+/* Reason dropdown */
 .dropdownTriggerReason:hover,
 .dropdownTriggerReason.dropdownTriggerOpen {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+  border-color: #64748b;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
 }
 
 .dropdownTriggerSelectedReason {
-  border-color: #10b981;
-  background: #f0fdf4;
+  border-color: #334155;
+  background: #f8fafc;
 }
 
 .dropdownValue {
@@ -538,62 +538,42 @@
 
 .timePill {
   display: inline-block;
-  background: #f0fdf4;
-  border: 1px solid #86efac;
-  color: #059669;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   white-space: nowrap;
   font-weight: 600;
+  color: #0f172a;
 }
 
 .crPill {
   display: inline-block;
-  background: #fef3c7;
-  border: 1px solid #fcd34d;
-  color: #b45309;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   font-family: 'Courier New', monospace;
   white-space: nowrap;
   font-weight: 700;
+  color: #0f172a;
 }
 
 .naCr { color: #94a3b8; }
 
 .teamPill {
   display: inline-block;
-  background: #dbeafe;
-  border: 1px solid #93c5fd;
-  color: #1d4ed8;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
+  color: #0f172a;
 }
 
 .quarterPill {
   display: inline-block;
-  background: #f3e8ff;
-  border: 1px solid #d8b4fe;
-  color: #7c3aed;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 700;
+  color: #0f172a;
 }
 
 .envPill {
   display: inline-block;
-  background: #fce7f3;
-  border: 1px solid #f9a8d4;
-  color: #be185d;
-  border-radius: 6px;
-  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
+  color: #0f172a;
 }
 
 /* ─── Empty State ─── */
