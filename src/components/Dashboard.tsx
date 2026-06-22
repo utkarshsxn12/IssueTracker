@@ -428,6 +428,7 @@ export default function Dashboard({ data, onReset }: Props) {
                     { key: 'crRitm', label: 'CR / RITM' },
                     { key: 'concernTeam', label: 'Concern Team' },
                     { key: 'quarter', label: 'Quarter' },
+                    { key: 'date', label: 'Date' },
                     { key: 'environment', label: 'Environment' },
                   ] as { key: keyof ActivityRow; label: string }[]).map((col) => (
                     <th key={col.key} className={styles.th} onClick={() => handleSort(col.key)}
@@ -456,6 +457,9 @@ export default function Dashboard({ data, onReset }: Props) {
                     </td>
                     <td className={styles.td}>
                       {row.quarter ? <span className={styles.quarterPill}>{row.quarter}</span> : '—'}
+                    </td>
+                    <td className={styles.td}>
+                      {row.date ? <span className={styles.datePill}>{row.date}</span> : '—'}
                     </td>
                     <td className={styles.td}>
                       {row.environment ? <span className={styles.envPill}>{row.environment}</span> : '—'}

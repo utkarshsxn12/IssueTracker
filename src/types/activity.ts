@@ -2,6 +2,7 @@ export interface ActivityRow {
   accountName: string;
   reason: string;
   timePosted: string;
+  date: string;
   crRitm: string;
   concernTeam: string;
   quarter: string;

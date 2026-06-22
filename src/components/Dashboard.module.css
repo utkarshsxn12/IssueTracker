@@ -569,6 +569,13 @@
   color: #0f172a;
 }
 
+.datePill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
 .envPill {
   display: inline-block;
   font-size: 0.75rem;

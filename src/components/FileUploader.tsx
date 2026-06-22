@@ -20,20 +20,31 @@ interface Props {
 
 // Flexible column mapping — tries multiple common header names
 function mapRow(raw: Record<string, unknown>): ActivityRow {
+  const usedKeys = new Set<string>();
+
   const get = (...keys: string[]): string => {
+    // 1. Exact / Case-insensitive match (ignoring leading/trailing spaces)
     for (const k of keys) {
-      const val = raw[k] ?? raw[k.toLowerCase()] ?? raw[k.toUpperCase()];
-      if (val !== undefined && val !== null && String(val).trim() !== '') {
-        return String(val).trim();
+      for (const rawKey of Object.keys(raw)) {
+        if (!usedKeys.has(rawKey) && rawKey.trim().toLowerCase() === k.toLowerCase()) {
+          const val = raw[rawKey];
+          if (val !== undefined && val !== null && String(val).trim() !== '') {
+            usedKeys.add(rawKey);
+            return String(val).trim();
+          }
+        }
       }
     }
-    // Fuzzy match
+    
+    // 2. Fuzzy match
     const rawKeys = Object.keys(raw);
     for (const k of keys) {
       const found = rawKeys.find((rk) =>
-        rk.toLowerCase().replace(/[\s_\-]/g, '').includes(k.toLowerCase().replace(/[\s_\-]/g, ''))
+        !usedKeys.has(rk) && 
+        rk.toLowerCase().replace(/[\s_\-\/]/g, '').includes(k.toLowerCase().replace(/[\s_\-\/]/g, ''))
       );
-      if (found && raw[found] !== undefined && raw[found] !== null) {
+      if (found && raw[found] !== undefined && raw[found] !== null && String(raw[found]).trim() !== '') {
+        usedKeys.add(found);
         return String(raw[found]).trim();
       }
     }
@@ -44,15 +55,15 @@ function mapRow(raw: Record<string, unknown>): ActivityRow {
     accountName: get('Account Name', 'AccountName', 'Account', 'account_name', 'ACCOUNT NAME'),
     reason: get('Reason', 'reason', 'REASON', 'Description', 'description'),
     timePosted: get(
+      'Date/Time Opened',
+      'Date/Time opened',
+      'date/time opened',
       'Time Posted',
       'TimePosted',
       'time_posted',
-      'Date',
-      'date',
       'Posted Date',
       'Timestamp',
-      'TIME POSTED',
-      'DATE'
+      'TIME POSTED'
     ),
     crRitm: get('CR/RITM', 'CR', 'RITM', 'cr_ritm', 'Change Request', 'CRRitm', 'cr/ritm'),
     concernTeam: get(
@@ -66,9 +77,7 @@ function mapRow(raw: Record<string, unknown>): ActivityRow {
     ),
     quarter: get('Quarter', 'quarter', 'QUARTER', 'Q', 'Qtr'),
     environment: get('Environment', 'environment', 'ENVIRONMENT', 'Env', 'env', 'ENV'),
-    ...Object.fromEntries(
-      Object.entries(raw).map(([k, v]) => [k, v === null || v === undefined ? '' : String(v)])
-    ),
+    date: get('Date', 'date', 'Posted Date', 'Date Posted', 'DATE'),
   };
 }
 
